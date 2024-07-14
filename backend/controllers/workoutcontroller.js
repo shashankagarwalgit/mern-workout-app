@@ -33,7 +33,7 @@ const createWorkout = async (req, res) => {
         workout.save();
         res.status(200).json(workout);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(400).json({ error: error.message });
     }
 }
 
